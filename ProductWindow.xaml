@@ -1,0 +1,77 @@
+﻿<Window x:Class="pp01.ProductWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Товар"
+        Width="450"
+        SizeToContent="Height"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner">
+
+    <StackPanel Margin="25">
+
+        <TextBlock
+            x:Name="TitleTextBlock"
+            Text="Добавление товара"
+            FontSize="26"
+            FontWeight="Bold"
+            Margin="0,0,0,20"/>
+
+        <TextBlock Text="Артикул"/>
+
+        <TextBox
+            x:Name="ProductIdTextBox"
+            Height="32"
+            Margin="0,5,0,15"/>
+
+        <TextBlock Text="Название"/>
+
+        <TextBox
+            x:Name="ProductNameTextBox"
+            Height="32"
+            Margin="0,5,0,15"/>
+
+        <TextBlock Text="Цена"/>
+
+        <TextBox
+            x:Name="PriceTextBox"
+            Height="32"
+            Margin="0,5,0,15"/>
+
+        <TextBlock Text="Категория"/>
+
+        <ComboBox
+            x:Name="CategoryComboBox"
+            Height="32"
+            Margin="0,5,0,15"
+            DisplayMemberPath="Name"
+            SelectedValuePath="Id"/>
+
+        <TextBlock Text="Поставщик"/>
+
+        <ComboBox
+            x:Name="SupplierComboBox"
+            Height="32"
+            Margin="0,5,0,25"
+            DisplayMemberPath="Name"
+            SelectedValuePath="Id"/>
+
+        <StackPanel Orientation="Horizontal">
+
+            <Button
+                Content="Сохранить"
+                Width="120"
+                Height="38"
+                Margin="0,0,10,0"
+                Click="Save_Click"/>
+
+            <Button
+                Content="Отмена"
+                Width="120"
+                Height="38"
+                Click="Cancel_Click"/>
+
+        </StackPanel>
+
+    </StackPanel>
+
+</Window>
